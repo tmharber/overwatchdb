@@ -4,7 +4,7 @@
   "description": "View hero data for the game Overwatch",
   "main": "src/app.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack -p && node_modules/.bin/http-server src/static",
+    "start": "node_modules/.bin/webpack -p && node_modules/.bin/http-server .",
     "test": "test"
   },
   "repository": {
@@ -26,7 +26,11 @@
   },
   "devDependencies": {
     "babel-loader": "^6.2.10",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "http-server": "^0.9.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   }
 }

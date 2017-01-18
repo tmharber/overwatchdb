@@ -1,4 +1,4 @@
 /node_modules
 /babel_cache
-/src/static/js
+/dist
 /src/data
