@@ -12,7 +12,7 @@ const server = new Server(app);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(Express.static(path.join(__dirname, '..', 'dist')));
+app.use('/static', Express.static(path.join(__dirname, '..', 'dist')));
 
 app.get('*', (req, res) => {
   match(
@@ -29,8 +29,7 @@ app.get('*', (req, res) => {
         markup = renderToString(<FileNotFound/>);
         res.status(404);
       }
-
-      // render the index template with the embedded React markup
+      
       return res.render('index', { markup });
     }
   );
